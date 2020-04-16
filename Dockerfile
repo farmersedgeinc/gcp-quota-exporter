@@ -13,4 +13,5 @@ RUN pipenv install --system --deploy
 COPY . .
 
 USER app
-CMD [ "python", "-u", "./exporter.py" ]
+# CMD [ "python", "-u", "./exporter.py" ]
+CMD [ "python", "-u", "./clock.py" ]
