@@ -5,6 +5,7 @@ RUN adduser -D -u 25000 -g app -h /usr/src/app app && \
     chown app:app /usr/src/app
 
 RUN apk add tzdata
+RUN apk add curl
 
 EXPOSE 8000
 
