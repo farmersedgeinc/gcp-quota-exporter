@@ -17,4 +17,5 @@ COPY . .
 
 USER app
 # CMD [ "python", "./clock.py" ]
-CMD [ "python", "-u", "./clock.py" ]
+# CMD [ "python", "-u", "./clock.py" ]
+CMD [ "python", "-u", "./exporter.py" ]
