@@ -13,10 +13,8 @@ RUN pip install --no-cache-dir pipenv
 COPY Pipfile* ./
 RUN pipenv install --system --deploy
 
-COPY . .
-# COPY clock.py ./
+COPY exporter.pm ./
+COPY setup.cfg ./
 
 USER app
-# CMD [ "python", "./clock.py" ]
-# CMD [ "python", "-u", "./clock.py" ]
 CMD [ "python", "-u", "./exporter.py" ]

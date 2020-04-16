@@ -36,7 +36,6 @@ class QuotaUpdater:
         Updates all the metrics.
         """
         try:
-            print("Michel go")
             self.update_regional_quotas()
             self.update_global_quotas()
             self.update_timestamp()
@@ -88,7 +87,6 @@ class QuotaUpdater:
         ]
         """
         for quota in quotas:
-            print(quota)
             for kind in ('limit', 'usage'):
                 self.publish_value(quota[kind], quota['metric'], kind, self.project_id)
             self.publish_value(
