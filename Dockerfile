@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM python:3.7
 
 WORKDIR /usr/src/app
 RUN adduser -D -u 25000 -g app -h /usr/src/app app && \
@@ -6,12 +6,7 @@ RUN adduser -D -u 25000 -g app -h /usr/src/app app && \
 
 EXPOSE 8000
 
-RUN pip install --no-cache-dir pipenv
-COPY Pipfile* ./
-RUN pipenv install --system --deploy
-
-COPY . .
+COPY clock.py ./
 
 USER app
-# CMD [ "python", "-u", "./exporter.py" ]
-CMD [ "python", "-u", "./clock.py" ]
+CMD [ "python", "./clock.py" ]
