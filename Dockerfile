@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir pipenv
 COPY Pipfile* ./
 RUN pipenv install --system --deploy
 
-COPY exporter.pm ./
+COPY exporter.py ./
 COPY setup.cfg ./
 
 USER app
