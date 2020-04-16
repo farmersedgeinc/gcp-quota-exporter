@@ -14,4 +14,5 @@ COPY . .
 # COPY clock.py ./
 
 USER app
-CMD [ "python", "./clock.py" ]
+# CMD [ "python", "./clock.py" ]
+CMD [ "python", "-u", "./clock.py" ]
