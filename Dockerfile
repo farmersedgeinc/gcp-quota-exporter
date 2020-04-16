@@ -6,6 +6,10 @@ RUN adduser -D -u 25000 -g app -h /usr/src/app app && \
 
 EXPOSE 8000
 
+RUN pip install --no-cache-dir pipenv
+COPY Pipfile* ./
+RUN pipenv install --system --deploy
+
 COPY clock.py ./
 
 USER app
