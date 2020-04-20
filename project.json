@@ -1,6 +1,5 @@
 {
   "project_configs_project": "gcp-quota",
-  "project_configs_branch": "gcp-quota",
   "components": {
     "exporter": {
       "context": ".",
