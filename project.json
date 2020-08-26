@@ -1,5 +1,6 @@
 {
   "project_configs_project": "gcp-quota",
+  "gcr": true,
   "components": {
     "exporter": {
       "context": ".",
